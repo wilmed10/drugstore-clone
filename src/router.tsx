@@ -14,7 +14,7 @@ export default function AppRouter() {
 
                     <Route path='/' element={<IndexPage/>} index />
 
-                    <Route path='/search' element={
+                    <Route path='/item-crema-ponds' element={
                         
                         <Suspense fallback="Cargando...">
                             <SearchPage/>

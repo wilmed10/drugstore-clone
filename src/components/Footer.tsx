@@ -2,9 +2,8 @@
 export default function Footer() {
   return (
     <div className="flex flex-col bg-[#FCFCFD] text-[#344054] px-4 md:px-20 py-10 gap-12">
-
       <div className="flex flex-col md:flex-row justify-between">
-
+        {/* categories */}
         <div className="grid grid-cols-2 md:flex gap-y-8 md:gap-8 text-wrap pb-8 break-words">
           <div className="flex flex-col gap-2 max-w-[170px]">
               <span className="text-lg md:text-xl font-bold">La empresa</span>
@@ -31,7 +30,7 @@ export default function Footer() {
               <p className="text-xs md:text-sm">servicioalcliente<br/>@droguerialaeconomia.com</p>
           </div>
         </div>
-
+        {/* redirection */}
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <span className="hidden md:flex text-xl font-bold" >!Descarga gratis la App!</span>
@@ -54,9 +53,8 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
       </div>
-
+      {/* copyright section */}
       <div className="flex flex-col md:flex-row items-center justify-between text-base gap-6 md:gap-0">
         <p className="text-sm text-wrap">©2023 Droguería La Economía. Todos los derechos reservados. v5.0 - <a href="/politicas" className="underline text-sm font-medium">Politicas de privacidad</a></p>
         <div className="flex gap-2 items-baseline">
@@ -64,7 +62,6 @@ export default function Footer() {
           <img src="./assets/mooba.png" alt="mooba" className="w-30" />
         </div>
       </div>
-
     </div>
   )
 }

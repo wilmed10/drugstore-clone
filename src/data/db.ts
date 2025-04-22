@@ -2,15 +2,13 @@ export const bannerImages = [
     {imgPath: "./assets/banner-inicio-1.jpg", url: "/promo-1"},
     {imgPath: "./assets/banner-inicio-2.jpg", url: "/promo-2"},
     {imgPath: "./assets/banner-inicio-3.jpg", url: "/promo-3"},
-    {imgPath: "./assets/banner-inicio-4.jpg", url: "/promo-4"},
-    {imgPath: "./assets/banner-inicio-5.jpg", url: "/promo-5"},
+    {imgPath: "./assets/banner-inicio-4.jpg", url: "/promo-4"}
 ]
 export const mobileBannerImages = [
     {imgPath: "./assets/banner-inicio-6.jpg", url: "/promo-6"},
     {imgPath: "./assets/banner-inicio-6.jpg", url: "/promo-6"},
     {imgPath: "./assets/banner-inicio-6.jpg", url: "/promo-6"},
-    {imgPath: "./assets/banner-inicio-6.jpg", url: "/promo-6"},
-    {imgPath: "./assets/banner-inicio-6.jpg", url: "/promo-6"},
+    {imgPath: "./assets/banner-inicio-6.jpg", url: "/promo-6"}
 ]
 
 export const dataFrame37424 = [

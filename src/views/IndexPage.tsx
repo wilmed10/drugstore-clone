@@ -35,8 +35,9 @@ export default function IndexPage() {
       <div className="pt-4 md:pt-0 pb-6 md:pb-4">
         <ImageSlider images={slidesToRender} />
       </div>
+
       {/* frame37424 */}
-      <div className="pl-4 md:px-20 pb-6 md:pb-10">
+      <div className="pl-4 md:px-20 pb-2 md:pb-10">
         <div className="flex lg:hidden">
           <CardSlider
             originType
@@ -56,6 +57,7 @@ export default function IndexPage() {
           ))}
         </div>
       </div>
+
       {/* Banner2 */}
       <Link to="/enterogermina">
         <div className="mx-auto px-4 md:px-20 pb-6 md:pb-10 duration-150 ease-in-out hover:scale-101">
@@ -64,6 +66,7 @@ export default function IndexPage() {
             </video>
         </div>
       </Link>
+
       {/* Card Slider 1 */}
       <div className="flex flex-col mx-auto w-full pl-4 md:px-20 pb-6 md:pb-10">
         <div className="flex content-center items-center pb-4">
@@ -114,6 +117,7 @@ export default function IndexPage() {
         </CardSlider>
 
       </div>
+
       {/* Categorias */}
       <div className="flex flex-col md:flex-row mx-auto px-4 md:px-20 pb-6 md:pb-10 gap-5 justify-between">
         {categories.map((item, i) => (
@@ -132,6 +136,7 @@ export default function IndexPage() {
           />
         ))}
       </div>
+
       {/* Card Slider 2 */}
       <div className="flex flex-col mx-auto w-full pl-4 md:px-20 pb-6 md:pb-10">
         <div className="flex content-center items-center pb-4">
@@ -182,6 +187,7 @@ export default function IndexPage() {
         </CardSlider>
 
       </div>
+
       {/* Circle Slider 1 */}
       <div className="flex flex-col mx-auto w-full md:px-20 pb-6 md:pb-10 gap-4 md:gap-5">
         <div className="flex content-center items-center px-4">
@@ -231,10 +237,12 @@ export default function IndexPage() {
           ))}
         </CardSlider>
       </div>
+
       {/* Banner vida sana */}
       <div className="mx-auto px-4 md:px-20 pb-6 md:pb-10">
         <img src="./assets/banner-vidasana.png" alt="Banner vida sana" className="rounded-lg"/>
       </div>
+
       {/* Circle Slider 2 */}
       <div className="flex flex-col mx-auto w-full md:px-20 pb-6 md:pb-10 gap-4 md:gap-5">
         <div className="flex content-center items-center px-4">
@@ -283,6 +291,7 @@ export default function IndexPage() {
           ))}
         </CardSlider>
       </div>
+      
       {/* Carousel/Slider bottom px-4 */}
       <div className="mx-auto md:px-20 pb-2 md:pb-10">
         <ImageSlider images={slidesToRender} className="rounded-lg" btnClass="-" />

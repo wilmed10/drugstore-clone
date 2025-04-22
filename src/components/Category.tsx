@@ -16,7 +16,7 @@ type categoryProps = {
 export default function Category({title, imgPath, url, description, category1, imgPath1, category2, imgPath2, category3, imgPath3}: categoryProps) {
   return (
     <div className="flex flex-col p-4 md:p-6 bg-white rounded-lg gap-4 md:gap-6">
-
+        {/* title and decription */}
         <div className="flex flex-col gap-2">    
             <div className="flex">
                 <span className="text-lg md:text-2xl font-bold pr-1">{title}</span>
@@ -24,7 +24,7 @@ export default function Category({title, imgPath, url, description, category1, i
             </div>
             <p className="text-xs md:text-base">{description}</p>
         </div>
-
+        {/* category items */}
         <Link to={url} className="group flex justify-between gap-2 md:gap-6 items-center">
            
             <div className="flex flex-col items-center">

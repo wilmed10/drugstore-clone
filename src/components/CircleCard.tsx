@@ -17,9 +17,9 @@ export default function CircleCard({ imgPath, url, title }: CircleCardProps) {
             />
         </div>
         {title && (
-            <div>
-                <span className="text-[#121212] text-[10px] md:text-sm">{title}</span>
-            </div>
+          <div>
+              <span className="text-[#121212] text-[10px] md:text-sm">{title}</span>
+          </div>
         )}
     </Link>
 
