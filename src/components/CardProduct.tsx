@@ -45,7 +45,7 @@ export default function CardProduct({ url, imgPath, title, price, lastPrice, dis
       </div>
 
       <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-5 mx-2 rounded-full flex justify-center items-center gap-2">
-        <img src="/assets/card-cart.svg" alt="Carrito" className="w-5" />
+        <img src="./assets/card-cart.svg" alt="Carrito" className="w-5" />
         <span className="font-medium">Agregar</span>
       </button>
     </Link>

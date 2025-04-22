@@ -14,10 +14,11 @@ type Breakpoints = {
 type CardSliderProps = {
   children: ReactNode
   className?: string
+  originType?: boolean
+  btn?: boolean
   autoplay?: boolean
   interval?: number
   breakpoints?: Breakpoints
-  slidesPerView?: number
   spacing?: number
   navigation?: boolean
   swipe?: boolean
@@ -26,19 +27,22 @@ type CardSliderProps = {
 export default function CardSlider({
   children,
   className = "",
+  originType = false,
+  btn = true,
   autoplay = false,
-  interval = 4000,
+  interval = 5000,
   breakpoints,
-  slidesPerView = 2,
   spacing = 0,
   swipe = true,
 }: CardSliderProps) {
 
-  /* sliderRef(to slider div) - instanceRef(to call next and prev methods) */
+  const originValue = originType ? "auto" : "center"
+
   const [sliderRef, instanceRef] = useKeenSlider<HTMLDivElement>({
     loop: true,
     slides: {
-      perView: slidesPerView,
+      origin: originValue,
+      perView: "auto",
       spacing: spacing,
     },
     breakpoints,
@@ -59,6 +63,8 @@ export default function CardSlider({
     }
   }, [autoplay, interval, instanceRef])
 
+  const showBtn = btn ? "lg" : "md"
+
   return (
     <div className={`relative w-full overflow-visible ${className}`}>
       <div ref={sliderRef} className="keen-slider">
@@ -68,15 +74,15 @@ export default function CardSlider({
       <div>
         <button
           onClick={() => instanceRef.current?.prev()}
-          className="hidden md:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-slider-button hover:bg-slider-border-button w-8 h-8 rounded-full shadow items-center justify-center border border-slider-border-button"
+          className={`hidden ${showBtn}:flex absolute -left-4 top-1/2 -translate-y-1/2 z-10 bg-slider-button hover:bg-slider-border-button w-8 h-8 rounded-full shadow items-center justify-center border border-slider-border-button`}
         >
-          <img src="/assets/left-arrow.svg" alt="Flecha izquierda" className="w-2.5" />
+          <img src="./assets/left-arrow.svg" alt="Flecha izquierda" className="w-2.5" />
         </button>
         <button
           onClick={() => instanceRef.current?.next()}
-          className="hidden md:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-slider-button hover:bg-slider-border-button w-8 h-8 rounded-full shadow items-center justify-center border border-slider-border-button"
+          className={`hidden ${showBtn}:flex absolute -right-4 top-1/2 -translate-y-1/2 z-10 bg-slider-button hover:bg-slider-border-button w-8 h-8 rounded-full shadow items-center justify-center border border-slider-border-button`}
         >
-          <img src="/assets/right-arrow.svg" alt="Flecha derecha" className="w-2.5" />
+          <img src="./assets/right-arrow.svg" alt="Flecha derecha" className="w-2.5" />
         </button>
       </div>
       
